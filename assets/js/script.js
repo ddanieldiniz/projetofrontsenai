@@ -1,20 +1,30 @@
-const menuItens = document.querySelectorAll('.menu a');
+//EFEITO SCROLL SUAVE - MENU
 
-menuItens.forEach(item => {
-    item.addEventListener('click', scrollToIdOnClick);
-})
+const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
 
-function scrollToIdOnClick(event) {
-    event.preventDefault();
-    const element = event.target;
-    const id = element.getAttribute('href');
-    const to = document.querySelector(id).offsetTop;
-    
+function getDistanceTop(element) {
+    const id = element.getAttribute("href");
+    return document.querySelector(id).offsetTop;
+}
+
+function nativeScroll(distanceTop) {
     window.scroll({
-        top: to,
-        behavior: "smooth",    
+       top: distanceTop,
+       behavior: "smooth",
     });
 }
+
+function scrollSuave(event) {
+    event.preventDefault();
+    const distanceTop = getDistanceTop(event.target) - 100;
+    nativeScroll(distanceTop);
+}
+
+menuLinks.forEach((link) => {
+    link.addEventListener("click", scrollSuave);
+});
+
+//EFEITO SCROLL SUAVE - MENU FIM
 
 window.onload = function(){
     document.querySelector(".menuMobile").addEventListener("click", function(){
