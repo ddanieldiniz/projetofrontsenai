@@ -380,6 +380,7 @@ CSS PARA AREAS ESPECIFICAS
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    cursor: pointer;
 }
 
 .section-projects--photo {
@@ -885,6 +886,43 @@ CSS PARA AREAS ESPECIFICAS
 .section-map--info-item-img img {
     width:15px;
     height:auto;
+}
+
+#modal_img {
+    width: 45vw;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.modal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#bt_close {
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 5px 10px;
+    font-size: 25px;
+    border: solid 1px #fff;
+    cursor: pointer;
+}
+
+.modal_active {
+    visibility: visible;
 }
 
 /* ANIMAÇÃO */

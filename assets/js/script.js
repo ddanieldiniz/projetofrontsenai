@@ -16,7 +16,7 @@ function nativeScroll(distanceTop) {
 
 function scrollSuave(event) {
     event.preventDefault();
-    const distanceTop = getDistanceTop(event.target) - 100;
+    const distanceTop = getDistanceTop(event.target);
     nativeScroll(distanceTop);
 }
 
@@ -24,7 +24,9 @@ menuLinks.forEach((link) => {
     link.addEventListener("click", scrollSuave);
 });
 
-//EFEITO SCROLL SUAVE - MENU FIM
+//EFEITO SCROLL SUAVE MENU - FIM
+
+//MENU MOBILE ABRIR -- FECHAR
 
 window.onload = function(){
     document.querySelector(".menuMobile").addEventListener("click", function(){
@@ -36,6 +38,9 @@ window.onload = function(){
     });
 };
 
+//MENU MOBILE ABRIR E FECHAR -- FIM
+
+//ANIMAÇÃO DE BLOCOS APARECENDO AO ROLAR SCROLL NA PAGINA
 
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
@@ -58,3 +63,27 @@ if(target.length) {
         animeScroll();
     })
 }
+
+//ANIMAÇÃO DE BLOCOS APARECENDO AO ROLAR SCROLL NA PAGINA -- FIM
+
+//MODAL IMG
+
+let imagens = document.querySelectorAll('.small_img');
+let modal = document.querySelector('.modal');
+let modalImg = document.querySelector('#modal_img');
+let btClose = document.querySelector('#bt_close');
+let srcVal = "";
+
+for(let i = 0; i<imagens.length; i++){
+    imagens[i].addEventListener('click', function(){
+        srcVal = imagens[i].getAttribute('src');
+        modalImg.setAttribute('src', srcVal);
+        modal.classList.toggle('modal_active');
+    });
+}
+
+btClose.addEventListener('click', function(){
+    modal.classList.toggle('modal_active');
+});
+
+//MODAL IMG --FIM
