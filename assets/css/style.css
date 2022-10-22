@@ -38,21 +38,6 @@ header {
     height: 80px;
 }
 
-
-.menuMobile{
-    display: none;
-    width: 40px;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-}
-
-.mm_line {
-    height: 3px;
-    background-color: #c48951;
-}
-
 .menu {
     flex: 1;
     display: flex;
@@ -64,7 +49,7 @@ header {
     list-style: none;
 }
 
-.menu ul {
+nav ul {
     display: flex;
 }
 
@@ -85,6 +70,20 @@ header {
 .menu .active a {
     border-bottom: 5px solid #B28756;
     color: #CCC;
+}
+
+.menuMobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.mm_line {
+    height: 3px;
+    background-color: #c48951;
 }
 
 .button {
@@ -653,91 +652,6 @@ CSS PARA AREAS ESPECIFICAS
     background-color: #B28756;
 }
 
-.premium {
-    background-color:#FFF !important;
-    border-top:1px solid #CCC;
-}
-.premium .section-body {
-    max-width:initial;
-}
-.section-premium {
-    overflow:hidden;
-}
-.section-premium a {
-    margin-top:30px;
-}
-.section-premium .sliders {
-    width:1000vw;
-    height:100%;
-}
-.section-premium .slide {
-    width:100vw;
-    height:100%;
-    display:inline-block;
-}
-.section-premium .slidearea {
-    display:flex;
-    height:100%;
-    justify-content: center;
-    align-items:center;
-    max-width:1140px;
-    border-bottom:1px solid #CCC;
-    margin:auto;
-    padding-bottom:40px;
-}
-.section-premium--left {
-    flex:1;
-    text-align:right;
-}
-.section-premium--left img {
-    width:300px;
-    margin-right:30px;
-}
-.section-premium--right {
-    flex:1;
-}
-.section-premium--item {
-    display:flex;
-    margin-bottom:20px;
-}
-.section-premium--item img {
-    width:20px;
-    height:20px;
-    margin-right:20px;
-}
-.section-premium--item div {
-    flex:1;
-    color:#999;
-    line-height:20px;
-}
-.section-premium--item div h4 {
-    color:#000;
-    font-size:17px;
-    font-weight:600;
-}
-
-.section-premium .sliders-pointers {
-    width:100vw;
-    height:20px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:40px;
-}
-.section-premium .pointer {
-    width:15px;
-    height:15px;
-    border:2px solid #B28756;
-    border-radius:8px;
-    margin-left:5px;
-    margin-right:5px;
-    cursor:pointer;
-}
-.section-premium .pointer.active {
-    background-color:#B28756;
-}
-
-
 .section-facts {
     display:flex;
 }
@@ -1048,6 +962,15 @@ CSS PARA AREAS ESPECIFICAS
         width:auto;
     }
 
+    #modal_img {
+        width: 90vw;
+    }
+
+    #bt_close {
+        top: 35vw;
+        right: 5vw;
+    }
+
     .section-services {
         flex-wrap:wrap;
     }
@@ -1060,7 +983,12 @@ CSS PARA AREAS ESPECIFICAS
     }
 
     .section-team {
-        max-width:580px;
+        max-width:280px;
+    }
+
+    .section-team .slide {
+        display: block;
+        margin-bottom: 20px;
     }
 
     .section-price {
@@ -1188,8 +1116,22 @@ CSS PARA AREAS ESPECIFICAS
         height:190px;
     }
 
+    #modal_img {
+        width: 90vw;
+    }
+
+    #bt_close {
+        top: 62vw;
+        right: 5vw;
+    }
+
     .section-team {
         max-width:280px;
+    }
+
+    .section-team .slide {
+        display: block;
+        margin-bottom: 20px;
     }
 
     .section-companies--area {
@@ -1210,18 +1152,6 @@ CSS PARA AREAS ESPECIFICAS
     }
     .section-price--item:last-child {
         margin-right:20px;
-    }
-
-    .section-premium .slidearea {
-        flex-direction: column;
-    }
-    .section-premium--left {
-        text-align:center;
-        margin-bottom:30px;
-    }
-    .section-premium--right {
-        padding-left:20px;
-        padding-right:20px;
     }
 
     .section-facts {
